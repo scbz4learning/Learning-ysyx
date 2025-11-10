@@ -1,0 +1,143 @@
+# ============================================================================
+# 一生一芯学习笔记 - Zensical 配置文件
+# 适配 GitHub Pages 自动部署
+# ============================================================================
+
+[project]
+
+# 站点名称，会显示在页面标题与顶部导航
+site_name = "一生一芯学习笔记"
+
+# 站点描述，用于 HTML meta 标签，利于 SEO
+site_description = "个人学习笔记与硬件实验记录"
+
+# 作者信息
+site_author = "scbz"
+
+# Canonical URL（GitHub Pages 对应网址）
+site_url = "https://scbz4learning.github.io/Learning-ysyx"
+
+# 版权信息
+copyright = """
+Copyright &copy; 2025 scbz4learning
+"""
+
+# 仓库信息（用于自动生成编辑按钮或跳转）
+repo_url = "https://github.com/scbz4learning/Learning-ysyx"
+
+# 自定义 JS 脚本，如 MathJax 支持
+extra_javascript = [
+  "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+]
+
+# ----------------------------------------------------------------------------
+# 主题配置
+# ----------------------------------------------------------------------------
+[project.theme]
+
+# 使用 Material 风格主题
+name = "material"
+
+# 页面语言
+language = "zh"
+
+# 可配置 favicon、logo 等
+# favicon = "assets/images/favicon.png"
+# logo = "assets/logo.png"
+
+# 启用的交互功能（按需精简）
+features = [
+  # 导航类
+  "navigation.expand",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.path",
+  "navigation.footer",        # ✅ 上一页 / 下一页
+  "navigation.top",
+  "navigation.tracking",
+
+  # 内容体验类
+  "content.code.copy",
+  "content.code.annotate",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "search.highlight",
+]
+
+
+# ----------------------------------------------------------------------------
+# 配色方案（亮/暗模式）
+# ----------------------------------------------------------------------------
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "切换到暗色模式"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "切换到亮色模式"
+
+# ----------------------------------------------------------------------------
+# 字体（如想用更现代字体可解注释）
+# ----------------------------------------------------------------------------
+#[project.theme.font]
+#text = "Inter"
+#code = "Jetbrains Mono"
+
+# ----------------------------------------------------------------------------
+# 额外信息（如主页链接、社交链接）
+# ----------------------------------------------------------------------------
+[project.extra]
+homepage = "https://scbz4learning.github.io/Learning-ysyx"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/scbz4learning/Learning-ysyx"
+
+# ----------------------------------------------------------------------------
+# Markdown 扩展设置（兼容原 mkdocs）
+# ----------------------------------------------------------------------------
+[markdown]
+extensions = [
+  "admonition",
+  "attr_list",
+  "def_list",
+  "footnotes",
+  "md_in_html",
+  "toc",
+  "pymdownx.details",
+  "pymdownx.emoji",
+  "pymdownx.superfences",
+  "pymdownx.tabbed",
+  "pymdownx.tasklist",
+]
+
+[markdown.toc]
+permalink = true
+
+[markdown.pymdownx.emoji]
+emoji_index = "material.extensions.emoji.twemoji"
+emoji_generator = "material.extensions.emoji.to_svg"
+
+[markdown.pymdownx.superfences.custom_fences.mermaid]
+class = "mermaid"
+format = "pymdownx.superfences.fence_code_format"
+
+[markdown.pymdownx.tasklist]
+custom_checkbox = true
+
+# ----------------------------------------------------------------------------
+# 构建设置
+# ----------------------------------------------------------------------------
+[build]
+clean = true
+output_dir = "site"
+base_path = "/Learning-ysyx"
+
+# ----------------------------------------------------------------------------
+# 插件设置
+# ----------------------------------------------------------------------------
+[plugins]
+search = true

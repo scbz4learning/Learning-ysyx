@@ -1,3 +1,4 @@
+# Logsim
 ## Inputs / Outputs
 ### Button  
 没有锁的按键  
@@ -17,7 +18,7 @@
 3. 右下二：寄存器指示，有 buffer 1  
 4. 右下一：输出，ascii，7位  
 
-![Keyboard Demo](./keyboard.gif)
+![Keyboard Demo](../assets/images/F/keyboard.gif)
 
 ### LED
 
@@ -26,7 +27,7 @@
 
 三输入，只有红绿蓝亮不亮，没有亮度调节  
 
-![LED RGB Demo](./LED_RGB.gif)
+![LED RGB Demo](../assets/images/F/LED_RGB.gif)
 
 ### 7-Segement Display
 七段显示器，就是数码管
@@ -45,14 +46,14 @@ docker run --tty <container-key>
 
 这个 TTY 的引脚要注意，WE 只代表是否使能写（i.e. 不需要时钟信号），时钟信号的上沿负责输入。
 
-![](./TTY_Wrong.gif)
+![](../assets/images/F/TTY_Wrong.gif)
 
-![](./TTY.gif)
+![](../assets/images/F/TTY.gif)
 
 和键盘一起：
-![](./TTY_KeyBoard_Wrong.gif)
+![](../assets/images/F/TTY_KeyBoard_Wrong.gif)
 
-![](./TTY_KeyBoard.gif)
+![](../assets/images/F/TTY_KeyBoard.gif)
 
 显然，原因是没有寄存器。另外用时钟肯定比手动好得多，我可不希望我的电脑是无数个小人在搬开关。。。
 
