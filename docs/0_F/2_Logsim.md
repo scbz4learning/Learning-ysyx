@@ -57,3 +57,7 @@ docker run --tty <container-key>
 
 显然，原因是没有寄存器。另外用时钟肯定比手动好得多，我可不希望我的电脑是无数个小人在搬开关。。。
 
+
+[Logisim_tut 电路图](../assets/circ/F/Logisim_tut.circ)
+
+[IO 电路图](../assets/circ/F/IO.circ)
