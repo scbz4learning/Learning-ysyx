@@ -182,3 +182,40 @@ $$
 ![6MOS XNOR](../assets/images/F/6MOS-XNOR.png)
 
 显然想不到，也不是好设计。模拟直接崩了。
+
+## 进位计数法 Machine representation of integers
+
+
+## 通过门电路搭建基本组合逻辑电路
+
+### 译码器
+
+译码器把 $k$ 位整数 变成 OHE。
+
+!!!note
+    什么神经？为啥这么干？明明 $k$ 条线就够了，为啥非要搞成 $2^k-1$ 条线？  
+    事实上还挺有用，intuitive 的想法是，地址转换器。我想在地址 0x0001 取一个数，那肯定只有该地址的控制线应该被激活。
+
+怎么实现呢？想想海明码？
+
+![24译码器](../assets/images/F/24译码器.gif)
+
+然而这个并不合适，用这个作为 38 DMX 会发下一个问题：
+
+![错误的 38译码器](../assets/images/F/38译码器_WRONG.png)
+
+每个译码器都必定会有一个输出。这显然不好。（谁的内存只有一个颗粒呢？）  
+
+然而很沮丧的是，我居然要为了每一个输出加一个 AND 门。好消息是，之后我不需要门电路来辅助构建新的DMX了。
+
+!!!note
+    记得计算机体系吗？片选确实需要线，不需要新的门
+
+![24DMX](../assets/images/F/24DMX.png)
+
+![38DMX](../assets/images/F/38DMX.png)
+
+
+### Problem of Subcircuit Shape
+!!!failure
+    ![subcircuit 形状不能保存](../assets/images/F/错误-subcircuit形状不能保存.gif)
