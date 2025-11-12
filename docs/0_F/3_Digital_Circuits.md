@@ -232,3 +232,10 @@ Naive 的办法：
 
 #### HEX 数码管
 ![DigitalDisplay_HEX](../assets/images/F/DigitalDisplay_HEX.gif)
+
+
+
+## 电路图
+[DMX24](../assets/circ/F/_DMX24.circ)
+
+[Digital Display](../assets/circ/F/DigitDisplay.circ)
