@@ -219,3 +219,16 @@ $$
 ### Problem of Subcircuit Shape
 !!!failure
     ![subcircuit 形状不能保存](../assets/images/F/错误-subcircuit形状不能保存.gif)
+
+
+### 数码管
+
+#### 7段数码管
+Naive 的办法：
+
+![DigitDisplay_7Seg_Naive](../assets/images/F/DigitDisplay_7Seg_Naive.gif)
+
+显然这不是非常好的办法，至少 9 的 OHE 根本没用。但是更多的优化——为啥不直接全定制呢？对啊，太麻烦了 Lol。
+
+#### HEX 数码管
+![DigitalDisplay_HEX](../assets/images/F/DigitalDisplay_HEX.gif)
